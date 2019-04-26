@@ -1,0 +1,80 @@
+﻿/*-------------------- Auto-suggest Dimension Search CSS------------------------*/
+div.dimSearchSuggContainer {
+	background-color: #FFFFFF;
+    border: thin solid #CCCCCC;
+    display: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+    z-index: 9999;
+    padding-bottom: 15px;
+}
+
+div.dimSearchSuggContainer .title {
+    color: #666;
+    width: 98%;
+    padding-left: 8px;
+    padding-right: 5px;
+}
+
+div.dimSearchSuggContainer .dimRoots {
+    border-top: 1px solid #E4E4E4; 
+    color: #666666;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px 5px 5px 8px;
+
+}
+
+div.dimSearchSuggContainer .dimResult {
+    cursor: pointer;
+    font-size: 12px;
+    width: 98%;
+}
+
+div.dimSearchSuggContainer .dimResult table {
+    width: 98%;
+    border-collapse: separate;
+}
+
+div.dimSearchSuggContainer .dimResult table td {
+    text-align: left;
+    padding: 0px;
+}
+
+div.dimSearchSuggContainer .dimResult a {
+	color: #666666;
+}
+
+div.dimSearchSuggContainer .dimResult .link {
+    line-height: 16px;
+    padding: 3px 5px 3px 9px;
+    width: 98%;
+}
+
+div.dimSearchSuggContainer .selected .link {
+    background-color: #f0f0f0;
+}
+
+div.dimSearchSuggContainer .dimResult img {
+    width: 36px;
+    height: 35px;
+    border: #CCC thin solid;
+}
+
+div.dimSearchSuggContainer .dimResult .link span {
+    color: #007000;
+    font-weight: bold;
+}
+
+.RR_ProductList
+{
+	display:none;	
+}
+
+.products-carousel__btns .disabledBtn{
+	opacity:.5;
+}
+/******** End of Auto-suggest Dimension Search CSS *********/

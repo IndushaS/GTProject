@@ -1,0 +1,2 @@
+﻿The main styles for the website comes from Style Guide project under WebProjects/DotCom.Web.StyleGuide. 
+So basically style.css, style.css.map and style.min.css get's copied to this directory upon build.

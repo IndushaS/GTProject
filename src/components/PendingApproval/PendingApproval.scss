@@ -1,0 +1,46 @@
+$primary-green: #007000;
+
+.approve{
+    float: right;
+    margin: 8px;
+}
+.ReactTable .-pagination{
+    max-height: 80px;
+    select {
+        display: none;
+    }
+    .-pageInfo{
+        margin: auto;
+    }
+}
+.Header{
+    text-align: left;
+    vertical-align:middle;
+    .btn{
+        float: right;
+        width: 60px;
+        height: 30px;
+        background-color:  $primary-green;
+        line-height: 15px;
+        border: $primary-green;
+        font-weight: 500;
+       margin-right: 5px;
+    }
+}
+.icon{  
+    width: 30px;
+    height:auto;
+    display: inline-block;
+    margin: 0px 0px 10px 10px;
+
+}
+h4{
+    display: inline-block
+}
+
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+    background-color: $primary-green !important;
+}
+.WidgetWrapper{
+    height: 350px;
+}

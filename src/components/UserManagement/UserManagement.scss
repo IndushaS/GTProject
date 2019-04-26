@@ -1,0 +1,60 @@
+$primary-green: #007000;
+
+.Header{
+    text-align: left;
+    vertical-align:middle;
+    .btn{
+        float: right;
+        width: 60px;
+        height: 30px;
+        line-height: 15px;
+        margin-right: 5px;
+    }
+}
+.icon{  
+    width: 30px;
+    height:auto;
+    display: inline-block;
+    margin: 0px 0px 10px 10px;
+
+}
+h4{
+    display: inline-block;
+
+}
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+    background-color: $primary-green !important;
+    background-color:  $primary-green;
+    border: $primary-green;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.UserContent{
+    text-align: left;
+    max-width: 500px;
+    margin: 5px 0px 0px 0px;
+    width: 100%;
+}
+.FilterInput{
+    margin:30px 0px 0px 10px;
+    .FilterHeader{
+        color: $primary-green;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+.Input{
+    float: left;
+}
+.FilterSelect{
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+.WidgetWrapper{
+    height: 350px;
+}
+.FilterWrapper{
+    margin: 0px 0px 0px 10px;
+}

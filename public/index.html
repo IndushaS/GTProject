@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=EDGE" />
+      <!-- X-UA-Compatible must be the first tag inside <head> -->
+      <meta charset="utf-8">
+      <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="theme-color" content="#000000">
+      
+      <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+
+      <link rel="stylesheet" href="index.css">
+      
+      <title>React App</title>
+  </head>
+  <body>
+      <a href="#main-content" class="skip-to-link">Skip to Main Content</a>
+
+<header class="site-header" role="banner">
+    <div class="site-header-container">
+        <div class="logos">
+            <a class="grandandtoy-logo" href="/sites/core/default.aspx"><img src="/Content/images/layout/logo-en.png"
+                    alt="grandandtoy.com home"></a>
+        </div>
+
+        <div class="site-header-small-tools">
+            <div class="main-nav-small-toggle">
+                <a href="#" class="header-toggle" toggle="main-nav-small"><i class="fa fa-reorder fa-lg" aria-hidden="true"></i><span
+                        class="sr-only">Navigation</span></a>
+            </div>
+            <div class="search-toggle">
+                <a href="#" class="header-toggle" toggle="search-toggle"><i class="fa fa-search fa-lg" aria-hidden="true"></i><span
+                        class="sr-only">Search</span></a>
+            </div>
+            <div class="signin-small-toggle">
+                <a href="#" class="header-toggle" toggle="signin-small"><i class="fa fa-user fa-lg" aria-hidden="true"></i><span
+                        class="sr-only">Sign In</span></a>
+            </div>
+        </div>
+
+        <!-- end .site-header-small-tools -->
+
+        <div class="site-header-wide-tools">
+
+
+            <div class="live-help-link visible-md">
+                <a href="#" onclick="window.open('https://officedepotchat-en.custhelp.com/app/chat/GaTEN_chat_launch/site/GATEN','Chat','width=400,height=650');return false;"
+                    rel="nofollow">
+                    <span class="fa fa-comment-o fa-lg">
+                    </span>
+                    Help
+                </a>
+            </div>
+            <div class="separator">•</div>
+
+
+
+
+            <div class="location-wide-toggle"><a href="#" class="popover-toggle" toggle="location-wide"><span>Oshawa,
+                        ON</span></a></div>
+            <div class="separator">•</div>
+
+            <div class="signin-wide-toggle">
+                <div class="signin-popup" data-gt-tooltip="container" data-gt-tooltip-hover-enabled="true">
+                    <a href="/Account/Logon" toggle="signin-wide" class="signin-btn">
+                        <span>Sign In</span>
+                    </a>
+                    <div class="gt-popup" data-gt-tooltip="content">
+                        <div class="p-1 border-bottom">
+                            <a href="/Account/Logon" class="btn btn-primary">Sign In</a>
+                        </div>
+                        <p class="p-1 m-0">
+                            <small>Don't have an account?</small><br>
+                            <a href="/Account/GetAnAccount">Create an Account</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="separator">
+                •
+            </div>
+            <div class="language-toggle">
+                <a href="/ChangeLanguage.aspx"><span>FR</span></a>
+            </div>
+        </div>
+
+        <div class="cart-toggle-wrapper">
+            <div class="cart-small-toggle">
+                <a href="#" class="header-toggle" toggle="header-cart">
+                    <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                    <span class="sr-only">Shopping cart</span>
+                    <span class="cart-items">0</span>
+                </a>
+            </div>
+            <div class="cart-wide-toggle popover-active">
+                <a href="/ShoppingCart" class="popover-toggle" toggle="header-cart">
+                    <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                    <span class="sr-only">Shopping cart</span>
+                    <span class="cart-items">0</span>
+                </a>
+            </div>
+        </div>
+
+        <ul class="mega-toggles" role="navigation">
+            <li>
+                <a href="/account/GetAnAccount" class="mega-toggle">Get an Account</a>
+            </li>
+            <li>
+                <a href="#" class="mega-toggle" mega-toggle="catalogue" aria-haspopup="true">Products</a>
+            </li>
+            <li>
+                <a href="/sites/core/ink-and-toner.aspx" class="mega-toggle" mega-toggle="inkandtoner" aria-haspopup="true">Ink
+                    &amp; Toner</a>
+            </li>
+            <li>
+                <a href="/sites/core/deals-and-shops.aspx" class="mega-toggle" mega-toggle="dealsandshops"
+                    aria-haspopup="true">Deals &amp; Shops</a>
+            </li>
+            <li>
+                <a href="/sites/core/service-solutions.aspx" class="mega-toggle">Services</a>
+            </li>
+            <li>
+                <a href="/sites/core/contact-us.aspx" class="mega-toggle">Customer Service</a>
+            </li>
+        </ul>
+
+        <form action="/Header/Search" class="location-form" method="post" novalidate="novalidate">
+            <div class="site-header-search sticky-search ">
+                <div class="search-standing-offer-btn">
+                    <button class="btn btn-dropdown" onclick="return false;"><span id="SearchModeText">All Products</span></button>
+                    <ul class="dropdown-menu" style="display: none;">
+                        <li>
+                            <a href="#" class="search-standing-offer-option" data-search-mode="AllProducts"
+                                data-search-mode-text="All Products">
+                                All Products
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="search-standing-offer-option" data-search-mode="StandingOffer"
+                                data-search-mode-text="Standing Offer">
+                                Standing Offer and Supply Arrangement Products
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search-input" role="search">
+                    <input data-val="true" data-val-required="The field SearchMode is required." id="SearchMode" name="SearchMode"
+                        type="hidden" value="AllProducts">
+                    <input class="search-input-field search-input-sticky" id="site-wide-search" name="TextSearch"
+                        placeholder="Search by Keyword or Product" type="text" value="">
+                    <button class="search-input-submit" type="submit" id="site-wide-search-submit"><i class="fa fa-search"
+                            aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </form> <!-- end .site-header-search -->
+        <!-- end .site-header-wide-tools -->
+    </div>
+</header>
+
+<div class="signin-small header-dropdown" id="signin-small">
+
+    <div class="location-small-wrapper">
+        <div class="location-small-container">
+            <p class="dialog"><a href="#" toggle="location-small"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+                    <span>Oshawa, ON [ Edit ]</span></a></p>
+            <div id="location-small">
+                <form action="/Header/ChangeLocation" class="location-form" method="post" novalidate="novalidate">
+                    <p class="instructions">Enter your postal code or sign in to receive the best value in your area.</p>
+                    <div class="postal-1">
+                        <label for="postal-1" class="sr-only">First three characters of postal code.</label>
+                        <input id="mobilePostalCodeFirst3Char" maxlength="3" name="PostalCode.First3Chars" type="text"
+                            value="">
+                    </div>
+                    <div class="postal-2">
+                        <label for="postal-2" class="sr-only">Last three letters of postal code.</label>
+                        <input id="mobilePostalCodeLast3Char" maxlength="3" name="PostalCode.Last3Chars" type="text"
+                            value="">
+                    </div>
+                    <div class="submit-button">
+                        <button id="postalcodemobilechangebtn" class="btn btn-primary" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <button class="close-btn" type="button"><i class="fa fa-remove fa-lg" aria-hidden="true"></i><span class="sr-only">Close</span></button>
+    <div class="signin">
+        <h2>Sign In</h2>
+        <form action="/Account/Logon" class="signin-form" method="post" novalidate="novalidate"><input name="__RequestVerificationToken"
+                type="hidden" value="Lj3LC_B05xRpnsuUKYyN8pdpn0XiZtk1NoOgxsLVWZTvGWy9LzadSqDhUNrJ7kn_t-I8AA2">
+            <div class="row">
+                <div class="username col-xs-12 form-group">
+                    <label for="signin-small-username">Email/Username</label>
+                    <input type="text" name="username" id="signin-small-username">
+                </div>
+            </div>
+            <div class="row">
+                <div class="password col-xs-12 form-group">
+                    <label for="signin-small-password">Password</label>
+                    <input type="password" name="password" id="signin-small-password">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 forgot-password">
+                    <p><a href="/account/forgotpassword">Forgot Password</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 submit-buttons">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+        <div class="create-account">
+            <p>New Customers: <a href="/Account/GetAnAccount">Create an Account</a></p>
+        </div>
+        <div class="guest-order-tracking">
+            <p><a href="/OrderTracking">Guest Order Tracking</a></p>
+        </div>
+    </div>
+    <!-- end .signin -->
+</div>
+
+<div class="popover" id="signin-wide">
+    <div class="signin-wide-container arrow-box-up">
+        <button class="close-btn" type="button"><i class="fa fa-remove fa-lg" aria-hidden="true"></i><span class="sr-only">Close</span></button>
+        <div class="signin">
+            <h2>Sign In</h2>
+            <form action="/Account/Logon" class="signin-form" method="post" novalidate="novalidate"><input name="__RequestVerificationToken"
+                    type="hidden" value="-DKPHUATiDpQy07wCImkP_Yv8-6-ZEuFZpc0Gf6yzujOiRyGIFhTNKlNIHgjUJmk6IWRyw2">
+                <div class="username">
+                    <label for="username">Email/Username</label>
+                    <input type="text" name="username" id="username">
+                </div>
+                <div class="password">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div class="forgot-password mb21">
+                    <a href="/account/forgotpassword">Forgot Password</a>
+                </div>
+                <div class="submit-buttons">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+        <!-- end .signin -->
+        <div class="register">
+            <h2>Register</h2>
+            <h3>New Customer?</h3>
+            <p>Shopping is even easier when you are an account holder. Save time and money, with advanced features such
+                as custom lists and more</p>
+            <ul>
+                <li>Advanced Tools &amp; Reporting</li>
+                <li>Saved Carts for easy ordering</li>
+                <li>Custom Lists</li>
+                <li>Order Tracking</li>
+            </ul>
+
+            <a href="/account/GetAnAccount" class="btn btn-chevron-small">Create Your Account</a>
+
+        </div>
+        <!-- end .register -->
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<div class="popover" id="location-wide">
+    <div class="location-wide-container arrow-box-up">
+        <form action="/Header/ChangeLocation" class="location-form" method="post" novalidate="novalidate">
+            <p class="instructions">Enter your postal code or sign in to receive the best value in your area.</p>
+            <div class="postal-1">
+                <label for="postal-1" class="sr-only">First three characters of postal code.</label>
+                <input id="webPostalCodeFirst3Char" maxlength="3" name="PostalCode.First3Chars" type="text" value="">
+            </div>
+            <div class="postal-2">
+                <label for="postal-2" class="sr-only">Last three letters of postal code.</label>
+                <input id="webPostalCodeLast3Char" maxlength="3" name="PostalCode.Last3Chars" type="text" value="">
+            </div>
+            <div class="submit-button">
+                <button id="postalCodeWebChangeBtn" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+        <div class="clearfix"></div>
+        <span id="postalCodeErrorMsg" style="display:none">Invalid postal code</span>
+    </div>
+
+</div>
+
+<div class="popover header-dropdown popover-active" id="header-cart">
+    <div class="header-cart-container arrow-box-up">
+        <button class="close-btn" type="button"><i class="fa fa-remove fa-lg" aria-hidden="true"></i><span class="sr-only">Close</span></button>
+        <div class="header-cart">
+            <h2>Shopping Cart</h2>
+
+
+            <div class="cart-info">
+                <p class="cart-total-items">Total Items: 0</p>
+            </div>
+            <div class="cart-checkout-wrapper">
+                <div class="row btn-wrapper">
+                    <div class="col-xs-12">
+                        <a href="/ShoppingCart" class="btn btn-primary cart-checkout">View Cart</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="total-items" style="display: none;">0</div>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<form action="/Header/Search" class="location-form" method="post" novalidate="novalidate">
+    <div class="site-header-search" id="search-toggle">
+        <div class="mobile-search ">
+            <div class="search-standing-offer-btn">
+                <button class="btn btn-dropdown" onclick="return false;"><span id="SearchModeText">All Products</span></button>
+                <ul class="dropdown-menu" style="display: none;">
+                    <li>
+                        <a href="#" class="search-standing-offer-option" data-search-mode="AllProducts"
+                            data-search-mode-text="All Products">
+                            All Products
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="search-standing-offer-option" data-search-mode="StandingOffer"
+                            data-search-mode-text="Standing Offer">
+                            Standing Offer and Supply Arrangement Products
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search-input" role="search">
+                <input class="search-input-field search-input-mobile" id="site-small-search" name="TextSearch"
+                    placeholder="Search by Keyword or Product" type="text" value="">
+                <button class="search-input-submit" type="submit" id="site-small-search-submit"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<nav class="main-nav-small header-dropdown" id="main-nav-small" aria-label="Mobile main menu">
+    <div class="default-accordion" data-accordion-prefix-classes="default-accordion" data-accordion-multiselectable="none"
+        role="tablist" aria-multiselectable="false">
+        <a href="/account/GetAnAccount" class="js-accordion__link default-accordion__link" id="accordion1_link1"><span>Get
+                an Account</span></a>
+
+        <button class="js-accordion__header default-accordion__header" aria-controls="accordion1_panel1" aria-expanded="false"
+            role="tab" id="accordion1_tab1" aria-selected="false"><span>Products</span></button>
+        <div class="js-accordion__panel default-accordion__panel" aria-labelledby="accordion1_tab1" role="tabpanel" id="accordion1_panel1"
+            aria-hidden="true">
+            <h2 class="default-accordion__title">Products</h2>
+            <ul class="accordion-subnav">
+                <li><a href="/EN/search/pages/catalog/Office-Supplies/_/N-af2"><span>Office Supplies</span></a></li>
+                <li><a href="/EN/search/pages/catalog/Technology/_/N-86f"><span>Technology</span></a></li>
+                <li><a href="/EN/search/pages/catalog/Breakroom/_/N-dv9"><span>Breakroom</span></a></li>
+                <li><a href="/EN/search/pages/catalog/Cleaning-Maintenance/_/N-dxp"><span>Cleaning &amp; Maintenance</span></a></li>
+                <li><a href="/EN/search/pages/catalog/Paper/_/N-ama"><span>Paper</span></a></li>
+                <li><a href="/EN/search/pages/catalog/Furniture/_/N-acq"><span>Furniture</span></a></li>
+                <li><a href="/EN/search/pages/catalog/Mail-Pack-Ship/_/N-cwx"><span>Mail, Pack &amp; Ship</span></a></li>
+                <li><a href="/EN/search/pages/catalog/Health-Safety/_/N-cya"><span>Health &amp; Safety</span></a></li>
+            </ul>
+        </div>
+
+        <button class="js-accordion__header default-accordion__header" aria-controls="accordion1_panel2" aria-expanded="false"
+            role="tab" id="accordion1_tab2" tabindex="-1" aria-selected="false"><span>Ink &amp; Toner</span></button>
+        <div class="js-accordion__panel default-accordion__panel" aria-labelledby="accordion1_tab2" role="tabpanel" id="accordion1_panel2"
+            aria-hidden="true">
+            <h2 class="default-accordion__title">Ink &amp; Toner</h2>
+            <ul class="accordion-subnav">
+                <li><a href="/sites/core/ink-and-toner.aspx"><span>Ink &amp; Toner</span></a></li>
+            </ul>
+        </div>
+
+        <button class="js-accordion__header default-accordion__header" aria-controls="accordion1_panel3" aria-expanded="false"
+            role="tab" id="accordion1_tab3" tabindex="-1" aria-selected="false"><span>Deals &amp; Shops</span></button>
+        <div class="js-accordion__panel default-accordion__panel" aria-labelledby="accordion1_tab3" role="tabpanel" id="accordion1_panel3"
+            aria-hidden="true">
+            <h2 class="default-accordion__title">Deals &amp; Shops</h2>
+            <ul class="accordion-subnav">
+                <li><a href="/sites/core/deals-and-shops.aspx"><span>Deals &amp; Shops</span></a></li>
+            </ul>
+        </div>
+        <a href="/sites/core/service-solutions.aspx" class="js-accordion__link default-accordion__link" id="accordion1_link2"><span>Services</span></a>
+        <a href="/sites/core/contact-us.aspx" class="js-accordion__link default-accordion__link" id="accordion1_link3"><span>Customer
+                Service</span></a>
+    </div>
+</nav>
+
+<div class="megamenu-wrapper" style="display: none; height: 0px;">
+    <ul class="megamenu">
+        <li class="mega-item mega-has-subnav" mega-toggle="">
+            <ul class="mega-subnav">
+                <li class="mega-subnav-item">
+                    <a href="/account/GetAnAccount" class="mega-subnav-title" aria-haspopup="true">
+                        Get an Account
+                    </a>
+                    <div class="mega-subnav-content">
+                        <ul class="mega-submenu">
+                            <!--Only show a maximum of 8 subitems for the categories withing the catalogue submenu-->
+
+                            <li class="mega-submenu-item">
+                                <a href="/account/GetAnAccount">
+                                    <img src="/images/submenu-shop-all.png" alt="">
+                                    <span>Shop All</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="modrop-banner">
+
+                        </div>
+                        <div class="featured-brands">
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li class="mega-item mega-has-subnav" mega-toggle="catalogue">
+            <ul class="mega-subnav">
+                <li class="mega-subnav-item">
+                    <a href="/EN/search/pages/catalog/Office-Supplies/_/N-af2" class="mega-subnav-title" aria-haspopup="true">
+                        Office Supplies
+                    </a>
+                    <div class="mega-subnav-content">
+                        <ul class="mega-submenu">
+                            <!--Only show a maximum of 8 subitems for the categories withing the catalogue submenu-->
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/2019-Calendars-Planners/_/N-agh">
+                                    <img src="/OnlineRepository/CategoryImages/1713_157.jpg" alt="">
+                                    <span>2019 Calendars &amp; Planners</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Pens-Pencils-Markers-Correction/_/N-cq6">
+                                    <img src="/OnlineRepository/CategoryImages/1713_617.jpg" alt="">
+                                    <span>Pens, Pencils, Markers &amp; Correction</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Binders-Report-Covers-Accessories/_/N-afq">
+                                    <img src="/OnlineRepository/CategoryImages/1713_150.jpg" alt="">
+                                    <span>Binders, Report Covers &amp; Accessories</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Filing-Solutions-Archiving-Supplies/_/N-ai8">
+                                    <img src="/OnlineRepository/CategoryImages/1713_219.jpg" alt="">
+                                    <span>Filing Solutions &amp; Archiving Supplies</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Office-Machines-Supplies/_/N-bcc">
+                                    <img src="/OnlineRepository/CategoryImages/1713_433.jpg" alt="">
+                                    <span>Office Machines &amp; Supplies</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Post-it-Notes-Flags-Tabs-Dispensers/_/N-als">
+                                    <img src="/OnlineRepository/CategoryImages/1713_195.jpg" alt="">
+                                    <span>Post-it Notes, Flags, Tabs &amp; Dispensers</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Desk-Accessories-Organizers/_/N-ah8">
+                                    <img src="/OnlineRepository/CategoryImages/1713_27.jpg" alt="">
+                                    <span>Desk Accessories &amp; Organizers</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Notebooks-Paper-Pads-Clipboards/_/N-ajl">
+                                    <img src="/OnlineRepository/CategoryImages/1713_78.jpg" alt="">
+                                    <span>Notebooks, Paper Pads &amp; Clipboards</span>
+                                </a>
+                            </li>
+
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/catalog/Office-Supplies/_/N-af2">
+                                    <img src="/images/submenu-shop-all.png" alt="">
+                                    <span>Shop All</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="modrop-banner">
+                            <div style="text-align: center; padding: 15px;">
+                                <div style="border-bottom: 2px solid #cccccc; margin-bottom: 0px;">
+                                    <p style="margin-bottom: 5px;"><strong>Featured Brands</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featured-brands">
+                            <p>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Grand-Toy/Office-Supplies/_/N-1z140pdZaf2?cmp=MDROPBRANDGRANDTOYOPEN"><img
+                                        src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/grandandtoy.png"
+                                        class="img-responsive" style="height: auto;"></a>
+                                <br>
+                                <a href="/en/sites/core/post-it-brand-page?cmp=MDROPBRANDPOSTITEN"><img src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/postit.png"
+                                        class="img-responsive" style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Binders/Cardinal/_/N-bitZ1z140kn?cmp=MDROPBRANDCARDINALEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/cardinal.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/category/Office-Supplies/Sharpie/_/N-af2Z1z140na?cmp=MDROPBRANDSHARPIEEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/sharpie.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Bic/Office-Supplies/_/N-1z140niZaf2?cmp=MDROPBRANDBICOPEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Bic.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Avery/Office-Supplies/_/N-1z140pjZaf2?cmp=MDROPBRANDAVERYEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/avery.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/dcr/sites/core/quartet-brand-page.aspx?cmp=MDROPQUARTET18EN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Quartet.png"
+                                        style="height: auto;"></a>
+                                <br>
+
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="mega-subnav-item">
+                    <a href="/EN/search/pages/catalog/Technology/_/N-86f" class="mega-subnav-title" aria-haspopup="true">
+                        Technology
+                    </a>
+                    <div class="mega-subnav-content">
+                        <ul class="mega-submenu">
+                            <!--Only show a maximum of 8 subitems for the categories withing the catalogue submenu-->
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Computer-Accessories/_/N-asr">
+                                    <img src="/OnlineRepository/CategoryImages/9996_100.jpg" alt="">
+                                    <span>Computer Accessories</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Storage-Memory/_/N-8yb">
+                                    <img src="/OnlineRepository/CategoryImages/9996_1004.jpg" alt="">
+                                    <span>Storage &amp; Memory</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Office-Mobile-Phones-Headsets-Accessories/_/N-dqr">
+                                    <img src="/OnlineRepository/CategoryImages/9996_119.jpg" alt="">
+                                    <span>Office &amp; Mobile Phones, Headsets &amp; Accessories</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Computers-Laptops-Tablets/_/N-b31">
+                                    <img src="/OnlineRepository/CategoryImages/9996_113.jpg" alt="">
+                                    <span>Computers, Laptops &amp; Tablets</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Monitors-Televisions-Projectors/_/N-dqp">
+                                    <img src="/OnlineRepository/CategoryImages/9996_121.jpg" alt="">
+                                    <span>Monitors, Televisions &amp; Projectors</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Mounts-Sit-Stand-Workstations/_/N-8bo">
+                                    <img src="/OnlineRepository/CategoryImages/9996_30030917.jpg" alt="">
+                                    <span>Mounts &amp; Sit-Stand Workstations</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Office-Printers-Scanners-Fax-Machines/_/N-dqs">
+                                    <img src="/OnlineRepository/CategoryImages/9996_120.jpg" alt="">
+                                    <span>Office Printers, Scanners &amp; Fax Machines</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Cables-Adapters-Power-Supply/_/N-au2">
+                                    <img src="/OnlineRepository/CategoryImages/9996_109.jpg" alt="">
+                                    <span>Cables, Adapters &amp; Power Supply</span>
+                                </a>
+                            </li>
+
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/catalog/Technology/_/N-86f">
+                                    <img src="/images/submenu-shop-all.png" alt="">
+                                    <span>Shop All</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="modrop-banner">
+                            <div style="text-align: center; padding: 15px;">
+                                <div style="border-bottom: 2px solid #cccccc; margin-bottom: 0px;">
+                                    <p style="margin-bottom: 5px;"><strong>Featured Brands</strong></p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="featured-brands">
+                            <p>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Verbatim/_/N-1z140om?cmp=MDROPBRANDVERVATIMTECHEN"><img
+                                        src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Vertbatim.png"
+                                        class="img-responsive" style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Technology/Logitech/_/N-86fZ1z140op?cmp=MDROPBRANDLOGITECHTECHEN"><img
+                                        src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Logitech.png"
+                                        class="img-responsive" style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Ergotron/_/N-1z0c2qe?cmp=MDROPBRANDERGOTRONTECHEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Ergotron.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Technology/Plantronics/_/N-86fZ1z140mu?cmp=MDROPBRANDPLANTRONICSTECHEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Plantronics.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Technology/Microsoft/_/N-86fZ1z140or?cmp=MDROPBRANDMICROSOFTTECHEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Microsoft.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Jabra/Office-Mobile-Phones-Headsets-Accessories/_/N-1z140lvZdqr?cmp=MDROPBRANDJABRATECHEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/jabra.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Cisco/Cisco-Meraki/Technology/_/N-1z0a72aZ1z0ilhvZ86f?Ns=p_ItemsSold%7C1&amp;cmp=MDROPBRANDCISCOTECHEN"><img
+                                        class="img-responsive" src="https://www.grandandtoy.com/OnlineRepository/dcr/logos/Cisco_Logo_no_TM_Homepage.png"
+                                        style="height: auto;"></a>
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="mega-subnav-item">
+                    <a href="/EN/search/pages/catalog/Breakroom/_/N-dv9" class="mega-subnav-title" aria-haspopup="true">
+                        Breakroom
+                    </a>
+                    <div class="mega-subnav-content">
+                        <ul class="mega-submenu">
+                            <!--Only show a maximum of 8 subitems for the categories withing the catalogue submenu-->
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Coffee/_/N-dvy">
+                                    <img src="/OnlineRepository/CategoryImages/1854_314.jpg" alt="">
+                                    <span>Coffee</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/K-Cup-Pods/_/N-dwt">
+                                    <img src="/OnlineRepository/CategoryImages/1854_315.jpg" alt="">
+                                    <span>K-Cup Pods</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Tea/_/N-dxo">
+                                    <img src="/OnlineRepository/CategoryImages/1854_377.jpg" alt="">
+                                    <span>Tea</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Candy-Snacks/_/N-dvl">
+                                    <img src="/OnlineRepository/CategoryImages/1854_311.jpg" alt="">
+                                    <span>Candy &amp; Snacks</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Beverages/_/N-dva">
+                                    <img src="/OnlineRepository/CategoryImages/1854_309.jpg" alt="">
+                                    <span>Beverages</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Coffee-Tea-Supplies/_/N-dw3">
+                                    <img src="/OnlineRepository/CategoryImages/1854_316.jpg" alt="">
+                                    <span>Coffee &amp; Tea Supplies</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Breakroom-Papers-Dispensers/_/N-dvg">
+                                    <img src="/OnlineRepository/CategoryImages/1854_217.jpg" alt="">
+                                    <span>Breakroom Papers &amp; Dispensers</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Food-Service-Supplies/_/N-dwa">
+                                    <img src="/OnlineRepository/CategoryImages/1854_752.jpg" alt="">
+                                    <span>Food Service Supplies</span>
+                                </a>
+                            </li>
+
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/catalog/Breakroom/_/N-dv9">
+                                    <img src="/images/submenu-shop-all.png" alt="">
+                                    <span>Shop All</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="modrop-banner">
+                            <div style="text-align: center; padding: 15px;">
+                                <div style="border-bottom: 2px solid #cccccc; margin-bottom: 0px;">
+                                    <p style="margin-bottom: 5px;"><strong>Featured Brands</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featured-brands">
+                            <p>
+                                <a href="https://www.grandandtoy.com/en/search/pages/category/Keurig/_/N-1z0cl0d?cmp=MDROPBRANDKEURIGEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Keurig.png"
+                                        style="height: auto;"></a>
+                            </p>
+
+                            <p>
+                                <a href="/EN/search/pages/browse/DAVIDsTEA-Sachets/_/N-1yzxzql?cmp=MDROPBRANDDAVIDSTEAEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/logos/DavidsTea.png"
+                                        style="height: auto;"></a>
+                            </p>
+
+
+                            <p>
+                                <a href="/EN/search/pages/browse/Nestle/_/N-1z0crf7?cmp=MDROPBRANDNESTLEEN"><img class="img-responsive"
+                                        src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Nestle.png"
+                                        style="height: auto;"></a>
+                            </p>
+
+                            <p>
+                                <a href="/EN/search/pages/browse/Bourbon-Coffee/_/N-1yzwwyv?cmp=MDROPBRANDBOURBONEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/bourbon-coffee.png"
+                                        style="height: auto;"></a>
+                            </p>
+
+                            <p>
+                                <a href="/EN/search/pages/browse/Hamilton-Beach/_/N-1z140jt?cmp=MDROPBRANDHAMILTONEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/hamilton-beach.png"
+                                        style="height: auto;"></a>
+                            </p>
+
+
+                            <p>
+                                <a href="/EN/search/pages/browse/Kelloggs/_/N-1z0crb4?cmp=MDROPBRANDKELLOGSEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Kelloggs.png"
+                                        style="height: auto;"></a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="mega-subnav-item">
+                    <a href="/EN/search/pages/catalog/Cleaning-Maintenance/_/N-dxp" class="mega-subnav-title"
+                        aria-haspopup="true">
+                        Cleaning &amp; Maintenance
+                    </a>
+                    <div class="mega-subnav-content">
+                        <ul class="mega-submenu">
+                            <!--Only show a maximum of 8 subitems for the categories withing the catalogue submenu-->
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Air-Fresheners/_/N-dxq">
+                                    <img src="/OnlineRepository/CategoryImages/1855_585.jpg" alt="">
+                                    <span>Air Fresheners</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Soap-Sanitizer/_/N-e0m">
+                                    <img src="/OnlineRepository/CategoryImages/1855_218.jpg" alt="">
+                                    <span>Soap &amp; Sanitizer</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Bathroom-Paper-Supplies/_/N-dxw">
+                                    <img src="/OnlineRepository/CategoryImages/1855_217.jpg" alt="">
+                                    <span>Bathroom Paper Supplies</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Cleaners-Detergents/_/N-dy7">
+                                    <img src="/OnlineRepository/CategoryImages/1855_216.jpg" alt="">
+                                    <span>Cleaners &amp; Detergents</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Cleaning-Tools-Equipment/_/N-dyu">
+                                    <img src="/OnlineRepository/CategoryImages/1855_220.jpg" alt="">
+                                    <span>Cleaning Tools &amp; Equipment</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Garbage-Recycling/_/N-dzz">
+                                    <img src="/OnlineRepository/CategoryImages/1855_222.jpg" alt="">
+                                    <span>Garbage &amp; Recycling</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Maintenance-Supplies/_/N-e05">
+                                    <img src="/OnlineRepository/CategoryImages/1855_219.jpg" alt="">
+                                    <span>Maintenance Supplies</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a>
+                                    <img alt="">
+                                    <span></span>
+                                </a>
+                            </li>
+
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/catalog/Cleaning-Maintenance/_/N-dxp">
+                                    <img src="/images/submenu-shop-all.png" alt="">
+                                    <span>Shop All</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="modrop-banner">
+                            <div style="text-align: center; padding: 15px;">
+                                <div style="border-bottom: 2px solid #cccccc; margin-bottom: 0px;">
+                                    <p style="margin-bottom: 5px;"><strong>Featured Brands</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featured-brands">
+                            <p>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Swiffer/_/N-1z0cric?cmp=MDROPBRANDSWIFFEREN"><img
+                                        src="https://www.grandandtoy.com/OnlineRepository/dcr/DropdownLogos/swiffer.png"
+                                        class="img-responsive" style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Clorox/_/N-1z140jh?cmp=MDROPBRANDCLOROXEN"><img
+                                        src="https://www.grandandtoy.com/OnlineRepository/dcr/DropdownLogos/clorox.png"
+                                        class="img-responsive" style="height: auto;"></a>
+                                <br>
+                                <a href="/EN/search/pages/browse/Bathroom-Paper-Supplies/Cascades-Pro/_/N-1yzv179Zdxw?cmp=MDROPBRANDCASCADEPRO"><img
+                                        src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/cascades-pro-logo.png"
+                                        class="img-responsive" style="height: auto;"></a>
+                                <br>
+                                <a href="/EN/search/pages/browse/Certainty/_/N-1z0cqu3?cmp=MDROPBRANDCERTAINTYEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/certainty.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="/EN/search/pages/browse/Gojo/_/N-1z140ji?cmp=MDROPBRANDGOJOEN"><img class="img-responsive"
+                                        src="https://www.grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Gojo.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Rubbermaid/_/N-1z140pm?cmp=MDROPBRANDRUBBERMAIDEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Rubbermaid.png"
+                                        style="height: auto;"></a>
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="mega-subnav-item">
+                    <a href="/EN/search/pages/catalog/Paper/_/N-ama" class="mega-subnav-title" aria-haspopup="true">
+                        Paper
+                    </a>
+                    <div class="mega-subnav-content">
+                        <ul class="mega-submenu">
+                            <!--Only show a maximum of 8 subitems for the categories withing the catalogue submenu-->
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Copy-Printing-Paper/_/N-ami">
+                                    <img src="/OnlineRepository/CategoryImages/1353_8.jpg" alt="">
+                                    <span>Copy &amp; Printing Paper</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Post-it-Notes-Flags-Tabs-Dispenser/_/N-amo">
+                                    <img src="/OnlineRepository/CategoryImages/1353_9.jpg" alt="">
+                                    <span>Post-it Notes, Flags, Tabs &amp; Dispenser</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Calendars-Planners/_/N-aml">
+                                    <img src="/OnlineRepository/CategoryImages/1353_12.jpg" alt="">
+                                    <span>Calendars &amp; Planners</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Heavy-Weight-Index-Paper/_/N-ame">
+                                    <img src="/OnlineRepository/CategoryImages/1353_7.jpg" alt="">
+                                    <span>Heavy Weight &amp; Index Paper</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Educational-Workbooks-Craft-Paper/_/N-amn">
+                                    <img src="/OnlineRepository/CategoryImages/1353_11.jpg" alt="">
+                                    <span>Educational Workbooks &amp; Craft Paper</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Notebooks-Paper-Pads/_/N-ams">
+                                    <img src="/OnlineRepository/CategoryImages/1353_13.jpg" alt="">
+                                    <span>Notebooks &amp; Paper Pads</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Point-of-Sale-Thermal-Specialty-Paper/_/N-amp">
+                                    <img src="/OnlineRepository/CategoryImages/1353_10.jpg" alt="">
+                                    <span>Point of Sale, Thermal &amp; Specialty Paper</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a>
+                                    <img alt="">
+                                    <span></span>
+                                </a>
+                            </li>
+
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/catalog/Paper/_/N-ama">
+                                    <img src="/images/submenu-shop-all.png" alt="">
+                                    <span>Shop All</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="modrop-banner">
+                            <div style="text-align: center; padding: 15px;">
+                                <div style="border-bottom: 2px solid #cccccc; margin-bottom: 0px;">
+                                    <p style="margin-bottom: 5px;"><strong>Featured Brands</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featured-brands">
+                            <p>
+
+                                <a href="https://www.grandandtoy.com/EN/search/pages/category/Grand-Toy/Paper/_/N-1z140pdZama?cmp=MDRPAPERBRANDGRANDTOYEN"><img
+                                        src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/grandandtoy.png"
+                                        class="img-responsive" style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Neenah/Paper/_/N-1z064f2Zama?showMoreIds=8?cmp=MDRPAPERBRANDNEENAHEN"><img
+                                        src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/neenah.png"
+                                        class="img-responsive" style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Hammermill/Paper/_/N-1z04aboZama?showMoreIds=8?cmp=MDRPAPERBRANDHAMMERMILLEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/hammermill.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Paper/Rolland/ROLLAND/_/N-1yzyhaqZ1z07hunZama?showMoreIds=8?cmp=MDRPAPERBRANDROLLANDEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Rolland.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Paper/Xerox/_/N-1z140ooZama?showMoreIds=8?cmp=MDRPAPERBRANDXEROXEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/xerox.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Hewlett-Packard/Paper/_/N-1z140owZama?showMoreIds=8?cmp=MDRPAPERBRANDHPEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/hewlett-packard.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Canon/Paper/_/N-1z140okZama?showMoreIds=8?cmp=MDRPAPERBRANDCANONEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos//canon.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Boise/Paper/_/N-1z140obZama?showMoreIds=8?cmp=MDRPAPERBRANDBOISEEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Boise.png"
+                                        style="height: auto;"></a>
+                                <br>
+
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="mega-subnav-item">
+                    <a href="/EN/search/pages/catalog/Furniture/_/N-acq" class="mega-subnav-title" aria-haspopup="true">
+                        Furniture
+                    </a>
+                    <div class="mega-subnav-content">
+                        <ul class="mega-submenu">
+                            <!--Only show a maximum of 8 subitems for the categories withing the catalogue submenu-->
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Chairs-Seating/_/N-ad6">
+                                    <img src="/OnlineRepository/CategoryImages/1733_4.jpg" alt="">
+                                    <span>Chairs &amp; Seating</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Storage-Cabinets-Filing-Cabinets/_/N-adz">
+                                    <img src="/OnlineRepository/CategoryImages/1733_7.jpg" alt="">
+                                    <span>Storage Cabinets &amp; Filing Cabinets</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Desks-Stands-Workstations/_/N-ady">
+                                    <img src="/OnlineRepository/CategoryImages/1733_6.jpg" alt="">
+                                    <span>Desks, Stands &amp; Workstations</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Furniture-Collections/_/N-cux">
+                                    <img src="/OnlineRepository/CategoryImages/1733_261.jpg" alt="">
+                                    <span>Furniture Collections</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/D%C3%A9cor-Lighting/_/N-aeg">
+                                    <img src="/OnlineRepository/CategoryImages/1733_10.jpg" alt="">
+                                    <span>Décor &amp; Lighting</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Tables/_/N-aex">
+                                    <img src="/OnlineRepository/CategoryImages/1733_16.jpg" alt="">
+                                    <span>Tables</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Bookcases-Shelving/_/N-b76">
+                                    <img src="/OnlineRepository/CategoryImages/1733_120.jpg" alt="">
+                                    <span>Bookcases &amp; Shelving</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Carts-Stands/_/N-ad5">
+                                    <img src="/OnlineRepository/CategoryImages/1733_3.jpg" alt="">
+                                    <span>Carts &amp; Stands</span>
+                                </a>
+                            </li>
+
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/catalog/Furniture/_/N-acq">
+                                    <img src="/images/submenu-shop-all.png" alt="">
+                                    <span>Shop All</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="modrop-banner">
+                            <div style="text-align: center; padding: 15px;">
+                                <div style="border-bottom: 2px solid #cccccc; margin-bottom: 0px;">
+                                    <p style="margin-bottom: 5px;"><strong>Featured Brands</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featured-brands">
+                            <p>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/category/Grand-Toy/Office-Furniture/_/N-1z140pdZacq?cmp=MDROFBRANDGRANDTOYEN"><img
+                                        src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/grandandtoy.png"
+                                        class="img-responsive" alt="" style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Global/_/N-1z140ng?cmp=MDROFBRANDERGOCENTRICEN"><img
+                                        src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Global.png"
+                                        class="img-responsive" alt="" style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Office-Furniture/WORKPRO/_/N-1z08rioZacq?showMoreIds=8?cmp=MDROFBRANDWORKPROEN"><img
+                                        class="img-responsive" alt="" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Workpro.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Office-Furniture/True-Seating-Concepts/_/N-1yzyi0yZacq?showMoreIds=8?cmp=MDROFBRANDTRUEDESIGNEN"><img
+                                        class="img-responsive" alt="" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/trueseating.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/deflecto/Deflect-O/Office-Furniture/_/N-1yzxw7tZ1yzymleZacq?showMoreIds=8?cmp=MDROFBRANDDEFLECTOEN"><img
+                                        class="img-responsive" alt="" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/deflecto.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Office-Furniture/Office-Star/_/N-1z09phlZacq?showMoreIds=8?cmp=MDROFBRANDOFFICESTAREN"><img
+                                        class="img-responsive" alt="" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/officestar.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Bush-Business-Furniture/Bush-Furniture/Office-Furniture/_/N-1yzxa0iZ1yzxa0jZacq?showMoreIds=8?cmp=MDROFBRANDBUSHEN"><img
+                                        class="img-responsive" alt="" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/bushfurniture.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Mayline/Office-Furniture/_/N-1z140m5Zacq?showMoreIds=8?cmp=MDROFBRANDMAYLINEEN"><img
+                                        class="img-responsive" alt="" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/mayline-safco.png"
+                                        style="height: auto;"></a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="mega-subnav-item">
+                    <a href="/EN/search/pages/catalog/Mail-Pack-Ship/_/N-cwx" class="mega-subnav-title" aria-haspopup="true">
+                        Mail, Pack &amp; Ship
+                    </a>
+                    <div class="mega-subnav-content">
+                        <ul class="mega-submenu">
+                            <!--Only show a maximum of 8 subitems for the categories withing the catalogue submenu-->
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Business-Kraft-Window-Envelopes/_/N-cwz">
+                                    <img src="/OnlineRepository/CategoryImages/1813_1.jpg" alt="">
+                                    <span>Business, Kraft &amp; Window Envelopes</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Mailing-Labels-Shipping-Tags/_/N-cx9">
+                                    <img src="/OnlineRepository/CategoryImages/1813_6.jpg" alt="">
+                                    <span>Mailing Labels &amp; Shipping Tags</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Mailers/_/N-cxf">
+                                    <img src="/OnlineRepository/CategoryImages/1813_11.jpg" alt="">
+                                    <span>Mailers</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Envelope-Moisteners-Letter-Openers/_/N-cx5">
+                                    <img src="/OnlineRepository/CategoryImages/1813_2.jpg" alt="">
+                                    <span>Envelope Moisteners &amp; Letter Openers</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Shipping-Moving-Boxes/_/N-cxw">
+                                    <img src="/OnlineRepository/CategoryImages/1813_3.jpg" alt="">
+                                    <span>Shipping &amp; Moving Boxes</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Hand-Trucks-Dollies/_/N-cx8">
+                                    <img src="/OnlineRepository/CategoryImages/1813_10.jpg" alt="">
+                                    <span>Hand Trucks &amp; Dollies</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Packing-Tape-Dispensers/_/N-cxu">
+                                    <img src="/OnlineRepository/CategoryImages/1813_8.jpg" alt="">
+                                    <span>Packing Tape &amp; Dispensers</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Bubble-Wrap-Kraft-Paper-Packaging-Supplies/_/N-cxo">
+                                    <img src="/OnlineRepository/CategoryImages/1813_4.jpg" alt="">
+                                    <span>Bubble Wrap, Kraft Paper &amp; Packaging Supplies</span>
+                                </a>
+                            </li>
+
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/catalog/Mail-Pack-Ship/_/N-cwx">
+                                    <img src="/images/submenu-shop-all.png" alt="">
+                                    <span>Shop All</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="modrop-banner">
+                            <div style="text-align: center; padding: 15px;">
+                                <div style="border-bottom: 2px solid #cccccc; margin-bottom: 0px;">
+                                    <p style="margin-bottom: 5px;"><strong>Featured Brands</strong></p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="featured-brands">
+                            <p>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/category/Mail-Pack-Ship/Grand-Toy/_/N-cwxZ1z140pd?cmp=MDROPBRANDGRANDTOYMAILEN"><img
+                                        src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/grandandtoy.png"
+                                        class="img-responsive" style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/category/Mail-Pack-Ship/Crownhill/_/N-cwxZ1z140mh?cmp=MDROPBRANDCROWNHILLMAILEN"><img
+                                        src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Crownhill.png"
+                                        class="img-responsive" style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/category/Mail-Pack-Ship/Scotch/_/N-cwxZ1z140og?cmp=MDROPBRANDSCOTCHMAILEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Scotch.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/category/Mail-Pack-Ship/Bankers-Box/_/N-cwxZ1z140l8?cmp=MDROPBRANDBANKERSMAILEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Bankersbox.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/category/Mail-Pack-Ship/Avery/_/N-cwxZ1z140pj?cmp=MDROPBRANDAVERYMAILEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/avery.png"
+                                        style="height: auto;"></a>
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="mega-subnav-item">
+                    <a href="/EN/search/pages/catalog/Health-Safety/_/N-cya" class="mega-subnav-title" aria-haspopup="true">
+                        Health &amp; Safety
+                    </a>
+                    <div class="mega-subnav-content">
+                        <ul class="mega-submenu">
+                            <!--Only show a maximum of 8 subitems for the categories withing the catalogue submenu-->
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/First-Aid-Kits-Medical-Supplies/_/N-cyg">
+                                    <img src="/OnlineRepository/CategoryImages/1833_1.jpg" alt="">
+                                    <span>First Aid Kits &amp; Medical Supplies</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Personal-Care/_/N-cyv">
+                                    <img src="/OnlineRepository/CategoryImages/1833_44.jpg" alt="">
+                                    <span>Personal Care</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Personal-Protection-Equipment/_/N-cyy">
+                                    <img src="/OnlineRepository/CategoryImages/1833_17.jpg" alt="">
+                                    <span>Personal Protection Equipment</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Safety-Regulation-Signs/_/N-cz9">
+                                    <img src="/OnlineRepository/CategoryImages/1833_10.jpg" alt="">
+                                    <span>Safety &amp; Regulation Signs</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Fire-Protection/_/N-cyf">
+                                    <img src="/OnlineRepository/CategoryImages/1833_2.jpg" alt="">
+                                    <span>Fire Protection</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Anti-Fatigue-Mats-Commercial-Floor-Mats/_/N-cyb">
+                                    <img src="/OnlineRepository/CategoryImages/1833_11.jpg" alt="">
+                                    <span>Anti-Fatigue Mats &amp; Commercial Floor Mats</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/category/Medicine-Pain-Relief/_/N-dt0">
+                                    <img src="/OnlineRepository/CategoryImages/1833_54.jpg" alt="">
+                                    <span>Medicine &amp; Pain Relief</span>
+                                </a>
+                            </li>
+                            <li class="mega-submenu-item">
+                                <a>
+                                    <img alt="">
+                                    <span></span>
+                                </a>
+                            </li>
+
+                            <li class="mega-submenu-item">
+                                <a href="/EN/search/pages/catalog/Health-Safety/_/N-cya">
+                                    <img src="/images/submenu-shop-all.png" alt="">
+                                    <span>Shop All</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="modrop-banner">
+                            <div style="text-align: center; padding: 15px;">
+                                <div style="border-bottom: 2px solid #cccccc; margin-bottom: 0px;">
+                                    <p style="margin-bottom: 5px;"><strong>Featured Brands</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featured-brands">
+                            <p>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Safety-Media/_/N-1yzzwby?Ntt=safety+media"><img
+                                        src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Safety-media.png"
+                                        class="img-responsive" style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/browse/Health-Safety-Security/Nexcare/_/N-1z0cr6yZcya?cmp=MDROPBRANDNEXCAREEN"><img
+                                        src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Nexcare.png"
+                                        class="img-responsive" style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/category/Health-Safety-Security/St-John-Ambulance/_/N-1z0j9tyZcya?cmp=MDROPBRANDSTJOHNEN"><img
+                                        src="https://grandandtoy.com/&#9;/OnlineRepository/dcr/DropdownLogos/stjohn-ambulance.png"
+                                        class="img-responsive" style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/category/Health-Safety-Security/Ronco/_/N-1z0cpulZcya?cmp=MDROPBRANDRONCOEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/Ronco.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/category/3M/Health-Safety-Security/_/N-1z140ocZcya?cmp=MDROPBRAND3MEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/3m.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="/EN/search/pages/browse/DENTEC/_/N-1z05oyw?cmp=MDROPBRANDDENTECEN"><img class="img-responsive"
+                                        src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/dentec.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="/EN/search/pages/browse/SAFE-CROSS/_/N-1z0cobl?cmp=MDROPBRANDSAFECROSSEN"><img
+                                        class="img-responsive" src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/safe-cross.png"
+                                        style="height: auto;"></a>
+                                <br>
+                                <a href="/EN/search/pages/browse/Viking/_/N-1yzvkmy?cmp=MDROPBRANDVIKINGEN"><img class="img-responsive"
+                                        src="https://grandandtoy.com/OnlineRepository/dcr/DropdownLogos/viking.png"
+                                        style="height: auto;"></a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li class="mega-item mega-has-subnav" mega-toggle="inkandtoner">
+            <ul class="mega-subnav">
+                <li class="mega-subnav-item">
+                    <!-- raw HTML start -->
+                    <!--script to search-->
+                    <script>
+                        function tonersearchmm() {
+                            var tonersearch = $("#ink-and-toner-search").val();
+                            var searchURLsubmit = "/en/sites/core/ink-and-toner.aspx";
+                            
+                            window.location.replace(searchURLsubmit);
+                        }
+                    </script>
+                    <!--script to search-->
+
+                    <!--Ink & Toner-->
+                    <div class="well-white-thin ink-and-toner" style="border:none;margin-bottom:0;">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h2>Ink &amp; Toner</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="ink-and-toner-search">
+                                            Search for Ink &amp; Toner:
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-9">
+                                        <input type="text" id="ink-and-toner-search">
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <button onclick="tonersearchmm()" class="btn btn-primary" id="tonerbutton">Search</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p class="text-center">
+                                            <a href="/EN/search/pages/browse/Toner-Drum-Cartridges/_/N-au0" class="text-regular"><img
+                                                    src="https://www.grandandtoy.com/OnlineRepository/CategoryImages/9996_107.jpg"
+                                                    class="img-responsive img-max-100">
+                                                <br>Toner &amp;
+                                                <br>Drum Cartridges</a>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p class="text-center">
+                                            <a href="/EN/search/pages/browse/Ink-Printheads/_/N-aty" class="text-regular"><img
+                                                    src="https://www.grandandtoy.com/OnlineRepository/CategoryImages/9996_106.jpg"
+                                                    class="img-responsive img-max-100">
+                                                <br>Ink &amp;
+                                                <br>Printheads</a>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p class="text-center">
+                                            <a href="/EN/search/pages/browse/Fuser-Maintenance-Kits/_/N-8wz" class="text-regular"><img
+                                                    src="https://www.grandandtoy.com/OnlineRepository/CategoryImages/9996_10030407.jpg"
+                                                    class="img-responsive img-max-100">
+                                                <br>Fuser &amp;
+                                                <br>Maintenance Kits</a>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p class="text-center">
+                                            <a href="/EN/search/pages/browse/Ribbons/_/N-atz" class="text-regular"><img
+                                                    src="https://www.grandandtoy.com/OnlineRepository/CategoryImages/9996_108.jpg"
+                                                    class="img-responsive img-max-100">
+                                                <br>Ribbons</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 ink-and-toner-promo">
+                                <div id="m-drop-ink-en">
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="thin">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="featured-brands">
+                                    <h5 class="text-muted">Featured brands</h5>
+                                    <ul>
+                                        <li>
+                                            <a href="/EN/search/pages/browse/Grand-Toy/Ink-Toner-Ribbons/_/N-1z140pdZ8wp">
+                                                <img src="https://www.grandandtoy.com/OnlineRepository/omxDS/MEGAMENU/Brands/Grand-and-toy.png"
+                                                    style="padding-right:10px;">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/EN/search/pages/browse/Hewlett-Packard/Ink-Toner-Ribbons/_/N-1z140owZ8wp">
+                                                <img src="https://www.grandandtoy.com/OnlineRepository/omxDS/MEGAMENU/Brands/hp.png"
+                                                    style="padding-right:10px;">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/EN/search/pages/browse/Ink-Toner-Ribbons/Lexmark/_/N-1z140p0Z8wp">
+                                                <img src="https://www.grandandtoy.com/OnlineRepository/omxDS/MEGAMENU/Brands/Lexmark.png"
+                                                    style="padding-right:10px;">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/EN/search/pages/browse/Ink-Toner-Ribbons/Xerox/_/N-1z140ooZ8wp">
+                                                <img src="https://www.grandandtoy.com/OnlineRepository/omxDS/MEGAMENU/Brands/xerox.png"
+                                                    style="padding-right:10px;">
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="/EN/search/pages/browse/Dell/Ink-Toner-Ribbons/_/N-1z0c2opZ8wp">
+                                                <img src="https://www.grandandtoy.com/OnlineRepository/omxDS/MEGAMENU/Brands/Dell-tech.png"
+                                                    style="padding-right:10px;">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Ink & Toner-->
+                    <!-- raw HTML stop -->
+                </li>
+            </ul>
+        </li>
+        <li class="mega-item mega-has-subnav" mega-toggle="dealsandshops">
+            <ul class="mega-subnav">
+                <li class="mega-subnav-item">
+                    <!-- raw HTML start -->
+                    <!--Deals & Shops-->
+                    <!--inline block---no whitespace or breaks between "</li><li>"-->
+                    <div class="mega-nav-list" style="background-color:#fff; margin-bottom:0;">
+                        <ul>
+                            <li>
+                                <a href="/EN/search/pages/category/_/N-1z0czra?cmp=MDROPBIGDEALSEN">
+                                    <img src="https://www.grandandtoy.com/OnlineRepository/ds/omxPromoTileAds/bigDeals.png">
+                                    <p>Deal Centre</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/EN/search/pages/browse/_/N-1z0bsdm?cmp=CLEARANCEEN">
+                                    <img src="https://www.grandandtoy.com/OnlineRepository/omxPic/clearance-icon-en.png">
+                                    <p>Clearance</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/EN/search/pages/browse.aspx?wh=true&amp;cmp=MDROPOVERSTOCKEN">
+                                    <img src="https://www.grandandtoy.com/OnlineRepository/dcr/DropdownIcons/overstock.png">
+                                    <p>Overstock</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/EN/search/pages/category/Technology/_/N-1z0czraZ86f?cmp=MDROPDEALSTECHDEALS0617EN">
+                                    <img src="https://www.grandandtoy.com/OnlineRepository/omxDS/MEGAMENU/DealsAndShops/monthly-tech.png">
+                                    <p>Technology Deals</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+
+                            <li>
+                                <a href="https://www.grandandtoy.com/EN/search/pages/category/_/N-1z0crxh?cmp=MDROPNEWPRODUCTSEN">
+                                    <img src="https://www.grandandtoy.com/OnlineRepository/omxDS/MEGAMENU/DealsAndShops/new-this-month.png">
+                                    <p>New This Month</p>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="/en/sites/core/rebate-centre?cmp=MDROPREBATECENTREEN">
+                                    <img src="https://www.grandandtoy.com/OnlineRepository/omxDS/MFEATURE/MFEATURE_RebateCenter.png">
+                                    <p>Rebate Centre</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/EN/search/pages/category/_/N-1z0cx3v.aspx?cmp=MDROPDEALSSHOPSGOGREENAPR17EN">
+                                    <img src="https://www.grandandtoy.com/OnlineRepository/omxDS/MEGAMENU/DealsAndShops/icon-gogreen2.png">
+                                    <p>Go Green</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div> <!-- raw HTML stop -->
+                </li>
+            </ul>
+        </li>
+        <li class="mega-item mega-has-subnav" mega-toggle="">
+            <ul class="mega-subnav">
+            </ul>
+        </li>
+        <li class="mega-item mega-has-subnav" mega-toggle="">
+            <ul class="mega-subnav">
+            </ul>
+        </li>
+    </ul>
+</div>
+      <div class="container-fixed page grid-view">
+          <div id="root"></div>
+      </div>
+      <footer class="site-footer" role="contentinfo">
+          <nav class="nav-container" aria-label="Footer menu">
+              <div class="default-accordion" data-accordion-prefix-classes="default-accordion" data-accordion-multiselectable="none"
+                  role="tablist" aria-multiselectable="false">
+      
+                  <button class="js-accordion__header default-accordion__header" aria-controls="accordion2_panel1"
+                      aria-expanded="false" role="tab" id="accordion2_tab1" aria-selected="false"><span>
+                          Shopping
+                      </span></button>
+                  <div class="js-accordion__panel default-accordion__panel" aria-labelledby="accordion2_tab1" role="tabpanel"
+                      id="accordion2_panel1" aria-hidden="true">
+                      <h2 class="default-accordion__title">
+                          Shopping
+                      </h2>
+                      <ul class="accordion-subnav">
+                          <li><a href="/EN/search/pages/catalog/Office-Supplies/_/N-af2"><span>Office Supplies</span></a></li>
+                          <li><a href="/EN/search/pages/catalog/Cleaning-Maintenance/_/N-dxp"><span>Cleaning &amp;
+                                      Maintenance</span></a></li>
+                          <li><a href="/EN/search/pages/catalog/Breakroom/_/N-dv9"><span>Breakroom</span></a></li>
+                          <li><a href="/EN/search/pages/catalog/Office-Furniture/_/N-acq"><span>Office Furniture</span></a></li>
+                          <li><a href="/EN/search/pages/catalog/Technology/_/N-86f"><span>Technology</span></a></li>
+                          <li><a href="/EN/search/pages/catalog/Paper/_/N-ama"><span>Paper</span></a></li>
+                          <li><a href="/EN/search/pages/catalog/Mail-Pack-Ship/_/N-cwx"><span>Mail, Pack &amp; Ship</span></a></li>
+                          <li><a href="/EN/search/pages/catalog/Health-Safety-Security/_/N-cya"><span>Health, Safety &amp;
+                                      Security</span></a></li>
+                          <li><a href="/sites/core/grand-rewards.aspx"><span>Grand Rewards</span></a></li>
+                      </ul>
+                  </div>
+      
+                  <button class="js-accordion__header default-accordion__header" aria-controls="accordion2_panel2"
+                      aria-expanded="false" role="tab" id="accordion2_tab2" tabindex="-1" aria-selected="false"><span>
+                          Business
+                      </span></button>
+                  <div class="js-accordion__panel default-accordion__panel" aria-labelledby="accordion2_tab2" role="tabpanel"
+                      id="accordion2_panel2" aria-hidden="true">
+                      <h2 class="default-accordion__title">
+                          Business
+                      </h2>
+                      <ul class="accordion-subnav">
+                          <li><a href="/account/GetAnAccount"><span>Get An Account</span></a></li>
+                          <li><a href="/account/publicaccountsignup1?gov=Y"><span>Get a Federal Government Account</span></a></li>
+                          <li><a href="/sites/core/business-solutions-overview.aspx"><span>Business Solutions</span></a></li>
+                          <li><a href="/sites/core/business-solutions-industry-solutions.aspx"><span>Industry Solutions</span></a></li>
+                          <li><a href="/account/PublicAccountSignUpChamber"><span>Chamber Of Commerce</span></a></li>
+                          <li><a href="/interiors/default.aspx"><span>Custom Interiors</span></a></li>
+                          <li><a href="/sites/core/think-overview "><span>Ink &amp; Toner Recycling</span></a></li>
+                          <li><a href="/sites/core/einvoicing_home"><span>e-Invoicing</span></a></li>
+                      </ul>
+                  </div>
+      
+                  <button class="js-accordion__header default-accordion__header" aria-controls="accordion2_panel3"
+                      aria-expanded="false" role="tab" id="accordion2_tab3" tabindex="-1" aria-selected="false"><span>
+                          About Us
+                      </span></button>
+                  <div class="js-accordion__panel default-accordion__panel" aria-labelledby="accordion2_tab3" role="tabpanel"
+                      id="accordion2_panel3" aria-hidden="true">
+                      <h2 class="default-accordion__title">
+                          About Us
+                      </h2>
+                      <ul class="accordion-subnav">
+                          <li><a href="/en/sites/core/corporate-profile-overview.aspx"><span>Corporate Profile</span></a></li>
+                          <li><a href="/sites/core/corporate-citizenship.aspx"><span>Corporate Citizenship</span></a></li>
+                          <li><a href="/sites/core/media-room.aspx"><span>Media Room</span></a></li>
+                          <li><a href="/sites/core/branch-offices"><span>Branch Offices</span></a></li>
+                          <li><a href="/sites/core/careers-home"><span>Careers</span></a></li>
+                      </ul>
+                  </div>
+      
+                  <button class="js-accordion__header default-accordion__header" aria-controls="accordion2_panel4"
+                      aria-expanded="false" role="tab" id="accordion2_tab4" tabindex="-1" aria-selected="false"><span>
+                          Support
+                      </span></button>
+                  <div class="js-accordion__panel default-accordion__panel" aria-labelledby="accordion2_tab4" role="tabpanel"
+                      id="accordion2_panel4" aria-hidden="true">
+                      <h2 class="default-accordion__title">
+                          Support
+                      </h2>
+                      <ul class="accordion-subnav">
+                          <li><a href="/OrderTracking"><span>Order Tracking</span></a></li>
+                          <li><a href="/sites/core/privacy-policy.aspx"><span>Privacy Policy</span></a></li>
+                          <li><a href="/sites/core/terms-and-conditions.aspx"><span>Terms &amp; Conditions</span></a></li>
+                          <li><a href="/sites/core/accessibility"><span>Accessibility</span></a></li>
+                          <li><a href="/sites/core/contact-us.aspx"><span>Contact Us</span></a></li>
+                          <li><a href="/ProductInquiry"><span>Can't Find A Product?</span></a></li>
+                          <li><a href="#" onclick="window.open('https://officedepotchat-en.custhelp.com/app/chat/GaTEN_chat_launch/site/GATEN','Chat','width=400,height=650');return false;"
+                                  rel="nofollow"><span>Live Help</span></a></li>
+                          <li><a href="/sites/core/product-recalls"><span>Product Recalls</span></a></li>
+                          <li><a href="/sites/core/free-calendar.aspx"><span>Free Calendar</span></a></li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+          <div class="info-container">
+              <div class="connect">
+                  <div class="social">
+                      <p>Connect</p>
+                      <ul class="social-media-icons">
+                          <li>
+                              <a href="https://twitter.com/grandandtoyca" target="_blank" class="twitter-link">
+                                  <span class="sr-only">Twitter</span>
+                                  <span class="fa-stack">
+                                      <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                                      <i class="fab fa-twitter fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                                  </span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="https://www.linkedin.com/company/grandandtoy" target="_blank" class="linkedin-link">
+                                  <span class="sr-only">LinkedIn</span>
+                                  <span class="fa-stack">
+                                      <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                                      <i class="fab fa-linkedin-in fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                                  </span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="https://www.instagram.com/grandandtoy" target="_blank" class="instagram-link">
+                                  <span class="sr-only">Instagram</span>
+                                  <span class="fa-stack">
+                                      <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                                      <i class="fab fa-instagram fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                                  </span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="https://www.facebook.com/grandandtoy" target="_blank" class="facebook-link">
+                                  <span class="sr-only">Facebook</span>
+                                  <span class="fa-stack">
+                                      <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                                      <i class="fab fa-facebook-f fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                                  </span>
+                              </a>
+                          </li>
+                      </ul>
+      
+                  </div>
+                  <div class="newsletter">
+                      <!---Sign up to receive email promotions-->
+      
+                      <form action="/Footer/Subscribe" class="location-form" method="post" novalidate="novalidate">
+                          <p>Sign up to receive email promotions, <br>or manage your existing email preferences</p>
+                          <div class="newsletter-input-container">
+                              <label for="SubscriptionEmail" class="sr-only">Enter your email address to sign up for the
+                                  newsletter</label>
+                              <input id="SubscriptionEmail" name="SubscriptionEmail"
+                                  placeholder="Email address" type="text" value="">
+                              <span class="field-validation-valid" data-valmsg-for="" data-valmsg-replace="true"></span>
+                              <button class="newsletter-submit" type="submit"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+              <div class="meta">
+                  <div class="copyright">
+                      <p>© 2018 Grand &amp; Toy Limited</p>
+                  </div>
+      
+                  <div class="server">
+                      <div class="essential-accessibility">
+                          <a target="_blank" href="https://www.essentialaccessibility.com/grand-and-toy/en?utm_source=grandandtoyenhomepage&amp;utm_medium=iconlarge&amp;utm_term=eachannelpage&amp;utm_content=header&amp;utm_campaign=grandandtoyen"><img
+                                  src="/Content/images/layout/essential-accessibility-icon.png" width="65" height="24" alt="Click this icon to download Essential Accessibility assistive technology free of charge. "></a>
+                      </div>
+                      <p>C6</p>
+                  </div>
+              </div>
+          </div>
+      </footer>
+  </body>
+</html>
